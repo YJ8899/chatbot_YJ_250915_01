@@ -43,7 +43,7 @@ else:
         stream = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": m["role"], "content": m["당신은 모오스 부호기 입니다. 답변을 모오스 부호로 해주세요."]}
+                {"role": m["role"], "content": m["content"]}
                 for m in st.session_state.messages
             ],
             stream=True,
